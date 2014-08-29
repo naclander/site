@@ -1,0 +1,57 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %link{href: "css/layouts/pure-min.css", rel: "stylesheet"}/
+    %link{href: "css/layouts/side-menu.css", rel: "stylesheet"}/
+    %link{href: "css/layouts/baby-blue.css", rel: "stylesheet"}/
+  %body
+    #layout
+      / Menu toggle
+      %a#menuLink.menu-link{href: "#menu"}
+        / Hamburger icon
+        %span
+      #menu
+        .pure-menu.pure-menu-open
+          //Title goes below
+          /%a.pure-menu-heading{href: "/"} TITLE
+          %a.pure-menu-heading{href: "/"}
+          %ul
+            %li.menu-item-divided.pure-menu-selected
+              %a{href: "/"} Home
+            %li
+              %a{href: "about"} About
+            %li
+              %a{href: "blog"} blog
+            %li
+              %a{href: "contact"} Contact
+      #main.wrapper
+        .header
+          %h1 Hello
+          %h2 My name is Nathan
+        .content
+          /%h2.content-subhead /Title goes here
+          %br
+          %br
+          %p
+            I'm a Computer Science and
+            Engineering student at UCLA. Feel free to look around the site,
+            or send me an
+            %a{:href => "mailto:naclander@linux.ucla.edu", :target => "_top"}
+              email
+            if you want to talk.
+        .push
+      .bottom.footer
+        .legal.pure-g
+          .pure-u-1.u-sm-1-2
+            %ul.legal-license
+              %a{href: "http://creativecommons.org/licenses/by/4.0/", rel: "license"}
+                %img.ccStamp{alt: "Creative Commons License", src: "/cc.svg"}/
+                %a{href: "http://creativecommons.org/licenses/by/4.0/", rel: "license"}
+          .pure-u-1.u-sm-1-2
+            %ul.legal-links
+              %li
+                %span{style: "-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); display: inline-block;"} ©
+                2014 Nathan Aclander. All Wrongs reserved.
+%script{src: "js/ui.js"}
