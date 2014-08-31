@@ -1,0 +1,14 @@
+.container {
+  text-align: justify;
+}
+.container div {
+  display: inline-block;
+}
+
+.container:after {
+  content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+
